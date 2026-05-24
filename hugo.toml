@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = ''
 title = "Seminarios FormAL"
 theme = "etch"
 locale = "es"
@@ -29,6 +29,10 @@ mainSections = ['posts']
     title = "archivo"
     url = "/archivo/"
     weight = 20
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
 
 [permalinks]
   posts = "/:title/"
