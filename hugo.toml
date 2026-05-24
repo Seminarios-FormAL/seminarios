@@ -1,0 +1,38 @@
+baseURL = 'https://example.org/'
+title = "Seminarios FormAL"
+theme = "etch"
+locale = "es"
+languageCode = "es"
+
+enableInlineShortcodes = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+mainSections = ['posts']
+
+[params]
+  description = "Your site description"
+  copyright = ""
+  dark = "auto"
+  highlight = true
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "charlas"
+    title = "charlas"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "archivo"
+    name = "archivo"
+    title = "archivo"
+    url = "/archivo/"
+    weight = 20
+
+[permalinks]
+  posts = "/:title/"
+
+[markup.goldmark.renderer]
+  # Allows HTML in Markdown
+  unsafe = true

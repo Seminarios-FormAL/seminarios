@@ -1,0 +1,23 @@
+<h3>{{ i18n "posts.title" }}</h3>
+<ul id="posts">
+
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- range $pages }}
+    <li>
+        <h4> <a href="{{ .Params.website }}">{{ .Params.charlista }}</a>, {{ .Params.afiliacion }} <a href="{{ .Params.link }}">(link: {{ .Params.link }})</a></h4>
+        <h5> {{ .Params.tituloCharla }} </h5>
+        <h6> {{ .Params.Date | time.Format ":date_long"  }}</h6>
+            <ul>
+                <h6>Argentina: {{ .Params.Date | time.In "America/Argentina/Buenos_Aires" | time.Format ":time_long"}} </h6>
+                <h6>Chile: {{ .Params.Date | time.In "America/Santiago" | time.Format ":time_long" }} </h6>
+                <h6>Uruguay: {{ .Params.Date | time.In "America/Montevideo" | time.Format ":time_long" }} </h6> 
+            </ul>
+        Abstract:
+        <br>
+            {{ .Params.abstract }}
+    </li>
+{{- end }}
+</ul>
+
+    {{/*  {{ if .Params.next }} 
+    {{ end }}   */}}

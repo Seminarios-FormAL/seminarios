@@ -1,0 +1,14 @@
+# Learn how to use Date format (date, created, updated)
+# -> https://gohugo.io/functions/dateformat/
+
+[posts]
+
+[posts.title]
+other = "Próximas charlas"
+
+
+
+[post]
+
+[post.updated]
+other = "Updated January 2, 2006"
