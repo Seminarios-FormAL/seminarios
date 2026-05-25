@@ -10,7 +10,7 @@ pygmentsUseClasses = true
 mainSections = ['posts']
 
 [params]
-  description = "Your site description"
+  description = "Seminarios remotos alrededor de lenguages de programación y verificación formal"
   copyright = ""
   dark = "auto"
   highlight = true
