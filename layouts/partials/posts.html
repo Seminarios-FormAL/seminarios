@@ -4,7 +4,7 @@
 {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- range $pages }}
     <li>
-        <h4> <a href="{{ .Params.website }}">{{ .Params.charlista }}</a>, {{ .Params.afiliacion }} <a href="{{ .Params.link }}">(link: {{ .Params.link }})</a></h4>
+        <h4> <a href="{{ .Params.website }}">{{ .Params.charlista }}</a>, {{ .Params.afiliacion }} <a href="{{ .Params.link }}">(link seminario)</a></h4>
         <h5> {{ .Params.tituloCharla }} </h5>
         <h6> {{ .Params.Date | time.Format ":date_long"  }}</h6>
             <ul>
