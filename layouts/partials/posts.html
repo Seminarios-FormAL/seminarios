@@ -1,8 +1,9 @@
 <h3>{{ i18n "posts.title" }}</h3>
 <ul id="posts">
 
-{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- range $pages }}
+{{ $d := time.ParseDuration "-1h" }}
+{{ $pages := where site.RegularPages.ByDate "Type" "in" site.Params.mainSections }}
+{{- range where $pages "Date" "gt" (now.UTC.Add $d) }}
     <li>
         <h4> <a href="{{ .Params.website }}">{{ .Params.charlista }}</a>, {{ .Params.afiliacion }} <a href="{{ .Params.link }}">(link seminario)</a></h4>
         <h5> {{ .Params.tituloCharla }} </h5>

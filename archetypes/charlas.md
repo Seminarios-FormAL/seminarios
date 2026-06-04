@@ -8,6 +8,7 @@ tituloCharla = ''
 afiliacion = ''
 next = false
 link = "TBD"
+slides = ""
 abstract = """
 
 """

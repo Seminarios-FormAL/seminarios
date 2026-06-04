@@ -1,0 +1,15 @@
+<h3>{{ i18n "past.title" }}</h3>
+<ul id="posts">
+
+{{ $pages := where site.RegularPages.ByDate "Type" "in" site.Params.mainSections }}
+{{- range where $pages "Date" "lt" now.UTC }}
+    <li>
+        <h4> <a href="{{ .Params.website }}">{{ .Params.charlista }}</a>, {{ .Params.afiliacion }} <a href="../slides/{{ .Params.slides }}">(slides)</a></h4>
+        <h5> {{ .Params.tituloCharla }} </h5>
+        <h6> {{ .Params.Date | time.Format ":date_long"  }}</h6>
+        {{/*  Abstract:
+        <br>
+            {{ .Params.abstract }}  */}}
+    </li>
+{{- end }}
+</ul>

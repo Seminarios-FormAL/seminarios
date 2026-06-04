@@ -1,8 +1,7 @@
-baseURL = ''
+baseURL = 'https://seminarios-formal.github.io/seminarios/'
 title = "Seminarios FormAL"
 theme = "etch"
 locale = "es"
-languageCode = "es"
 
 enableInlineShortcodes = true
 pygmentsCodeFences = true
