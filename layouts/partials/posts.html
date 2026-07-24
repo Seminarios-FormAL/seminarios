@@ -15,7 +15,8 @@
             </ul>
         Abstract:
         <br>
-            {{ .Params.abstract }}
+            {{/*  {{ .Params.abstract | markdownify }}   */}}
+            {{ .Params.abstract | markdownify }} 
     </li>
 {{- end }}
 </ul>
