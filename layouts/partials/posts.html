@@ -4,6 +4,7 @@
 {{ $d := time.ParseDuration "-1h" }}
 {{ $pages := where site.RegularPages.ByDate "Type" "in" site.Params.mainSections }}
 {{- range where $pages "Date" "gt" (now.UTC.Add $d) }}
+    {{ if .Params.next }} 
     <li>
         <h4> <a href="{{ .Params.website }}">{{ .Params.charlista }}</a>, {{ .Params.afiliacion }} <a href="{{ .Params.link }}">(link seminario)</a></h4>
         <h5> {{ .Params.tituloCharla }} </h5>
@@ -18,8 +19,6 @@
             {{/*  {{ .Params.abstract | markdownify }}   */}}
             {{ .Params.abstract | markdownify }} 
     </li>
+    {{ end }} 
 {{- end }}
 </ul>
-
-    {{/*  {{ if .Params.next }} 
-    {{ end }}   */}}
