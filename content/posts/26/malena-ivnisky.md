@@ -1,6 +1,6 @@
 +++
 date = "2026-09-30T16:00:00"
-draft = true
+draft = false
 title = 'Malena Ivnisky'
 charlista = 'Malena Ivnisky'
 website = "https://mivnisky.github.io/"
