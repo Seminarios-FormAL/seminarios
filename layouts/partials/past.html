@@ -5,14 +5,16 @@
 {{- range where $pages "Date" "lt" now.UTC }}
     {{ $slides := .Params.slides }}
     {{ $link := "" }}
-    {{ if hasPrefix $slides "http" }}
-        {{ $link = $slides }}
-    {{ else }}
-        {{ $link = add "../slides/" $slides }}
+    {{ if $slides }}
+        {{ if hasPrefix $slides "http" }}
+            {{ $link = $slides }}
+        {{ else }}
+            {{ $link = add "../slides/" $slides }}
+        {{ end }}
+        {{ $link = `<a href="{{ $link }}">(slides)</a>`}}
     {{ end }}
-    
     <li>
-        <h4> <a href="{{ .Params.website }}">{{ .Params.charlista }}</a>, {{ .Params.afiliacion }} <a href="{{ $link }}">(slides)</a></h4>
+        <h4> <a href="{{ .Params.website }}">{{ .Params.charlista }}</a>, {{ .Params.afiliacion }} {{ $link | safeHTML }} </h4>
         <h5> {{ .Params.tituloCharla }} </h5>
         <h6> {{ .Params.Date | time.Format ":date_long"  }}</h6>
         <details>
