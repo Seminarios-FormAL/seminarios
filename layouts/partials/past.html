@@ -11,7 +11,7 @@
         {{ else }}
             {{ $link = add "../slides/" $slides }}
         {{ end }}
-        {{ $link = `<a href="{{ $link }}">(slides)</a>`}}
+        {{ $link = (add "<a href=" $link ">(slides)</a>") }}
     {{ end }}
     <li>
         <h4> <a href="{{ .Params.website }}">{{ .Params.charlista }}</a>, {{ .Params.afiliacion }} {{ $link | safeHTML }} </h4>
