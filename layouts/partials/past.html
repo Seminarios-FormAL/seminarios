@@ -2,7 +2,7 @@
 <ul id="posts">
 
 {{ $pages := where site.RegularPages.ByDate "Type" "in" site.Params.mainSections }}
-{{- range where $pages "Date" "lt" now.UTC }}
+{{- range where $pages.ByDate.Reverse "Date" "lt" now.UTC }}
     {{ $slides := .Params.slides }}
     {{ $link := "" }}
     {{ if $slides }}
