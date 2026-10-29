@@ -1,11 +1,11 @@
 +++
 date = '2026-11-25T16:00:00'
-draft = true
+draft = false
 title = 'Luciano Barletta'
 charlista = 'Luciano Barletta'
 website = ""
 tituloCharla = 'Lenguaje cuántico de control clásico basado en circuitos, con lógica de Hoare'
-afiliacion = ''
+afiliacion = 'LORIA / INRIA'
 next = true
 link = "https://univ-nantes-fr.zoom.us/j/81381630063?pwd=9okUbhUa0VR6ovrcOY5kbsa8EewmOb.1"
 slides = ""
