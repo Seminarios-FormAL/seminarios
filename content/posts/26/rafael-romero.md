@@ -5,7 +5,7 @@ title = 'Rafael Romero'
 charlista = 'Rafael Romero'
 website = "https://leafarromero.github.io/"
 tituloCharla = 'Basis-Sensitive Quantum Typing via Realisability'
-afiliacion = ''
+afiliacion = 'UNQ / ICC-CONICET'
 next = false
 link = "https://univ-nantes-fr.zoom.us/j/89681450669?pwd=5WGkgrbknPug0N9rNrNBBf9qGQYqOT.1"
 slides = "26-07-romero.pdf"
