@@ -4,7 +4,7 @@ draft = false
 title = 'Tomás Díaz'
 charlista = 'Tomás Díaz'
 website = "https://pleiad.cl/people/tdiaz"
-tituloCharla = ''
+tituloCharla = 'Incremental Certified Programming'
 afiliacion = 'Universidad de Chile / Nantes Université'
 next = true
 link = "https://univ-nantes-fr.zoom.us/j/86280829504?pwd=TySS0e7FoDBdqlSxCl7lM0YUBc3nr3.1"
